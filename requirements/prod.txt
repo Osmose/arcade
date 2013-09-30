@@ -1,0 +1,4 @@
+# Libraries needed for a production install of topdown.
+
+Django==1.5.4
+jingo==0.6.1
