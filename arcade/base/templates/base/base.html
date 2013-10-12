@@ -4,11 +4,43 @@
     <meta charset="utf-8">
     <title>arcade</title>
 
-    {% block site_css %}{% endblock %}
+    {% block site_css %}
+      <link href="{{ static('css/bootstrap.css') }}" rel="stylesheet">
+      {{ browserid_css() }}
+      <link href="{{ static('css/global.css') }}" rel="stylesheet">
+    {% endblock %}
   </head>
   <body>
-    {% block content %}{% endblock %}
+    {{ browserid_info() }}
+    <div id="non-footer">
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <a class="navbar-brand" href="{{ url('base.home') }}">arcade</a>
+          <p class="navbar-text pull-right">
+            {% if not user.is_authenticated() %}
+              {{ browserid_login(next=request.get_full_path(), color='dark') }}
+            {% else %}
+              {{ user_display(user) }} |
+              {{ browserid_logout() }}
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <p class="text-muted credit">
+          Made by humans. <a href="https://github.com/Osmose/arcade">Available on Github</a>.
+        </p>
+      </div>
+    </footer>
 
-    {% block site_js %}{% endblock %}
+    {% block site_js %}
+      <script src="{{ static('js/jquery-2.0.3.js') }}"></script>
+      {{ browserid_js() }}
+    {% endblock %}
   </body>
 </html>

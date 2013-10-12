@@ -69,6 +69,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
+    'django_browserid.auth.BrowserIDBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -81,6 +82,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
    'django.core.context_processors.static',
    'django.core.context_processors.tz',
    'django.contrib.messages.context_processors.messages',
+   'django_browserid.context_processors.browserid',
 )
 
 ROOT_URLCONF = 'arcade.urls'
@@ -89,6 +91,9 @@ WSGI_APPLICATION = 'arcade.wsgi.application'
 
 INSTALLED_APPS = (
     'arcade.base',
+    'arcade.users',
+
+    'django_browserid',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
