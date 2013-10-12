@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, url
 
-from topdown.base import views
+from arcade.base import views
 
 
 urlpatterns = patterns('',

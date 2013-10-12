@@ -19,4 +19,4 @@ tmp/*
 *.egg-info
 media/*
 venv/*
-topdown.db
+arcade.db

@@ -1,6 +1,6 @@
-# topdown
+# arcade
 
-A community for making top-down action-adventure games.
+A community for HTML5 games.
 
 ## Developer Setup
 
@@ -26,5 +26,5 @@ python manage.py runserver`
 
 ## License
 
-topdown is licensed under the [MIT License](http://opensource.org/licenses/MIT). See `LICENSE`
+arcade is licensed under the [MIT License](http://opensource.org/licenses/MIT). See `LICENSE`
 for details.

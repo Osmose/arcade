@@ -8,7 +8,7 @@ from . import base
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': base.path('topdown.db'),
+        'NAME': base.path('arcade.db'),
     }
 }
 

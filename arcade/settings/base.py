@@ -83,12 +83,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
    'django.contrib.messages.context_processors.messages',
 )
 
-ROOT_URLCONF = 'topdown.urls'
+ROOT_URLCONF = 'arcade.urls'
 
-WSGI_APPLICATION = 'topdown.wsgi.application'
+WSGI_APPLICATION = 'arcade.wsgi.application'
 
 INSTALLED_APPS = (
-    'topdown.base',
+    'arcade.base',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',

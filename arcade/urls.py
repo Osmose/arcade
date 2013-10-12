@@ -2,5 +2,5 @@ from django.conf.urls import patterns, include, url
 
 
 urlpatterns = patterns('',
-    url(r'', include('topdown.base.urls'))
+    url(r'', include('arcade.base.urls'))
 )
