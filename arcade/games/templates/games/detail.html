@@ -2,6 +2,22 @@
 
 {% block content %}
   <h1>{{ game.name }}</h1>
-  <iframe src="{{ game.launch_url }}" style="width: 800px; height: 600px" allowfullscreen="true">
-  </iframe>
+  <div class="row">
+    <div id="game-frame-container" class="col-md-9">
+      <iframe id="game-frame" src="{{ game.launch_url }}" allowfullscreen="true"></iframe>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h2 class="panel-title">Details</h2></div>
+        <div class="panel-body">
+          <dl>
+            <dt>Uploaded by</dt>
+            <dd>{{ game.author.email }}</dd>
+            <dt>Developer</dt>
+            <dd>{{ game.developer_name }}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

@@ -11,6 +11,17 @@ body {
     margin: 0 0 -6px;
 }
 
+/* @games
+-------------------------------------------------- */
+#game-frame-container {
+    position: relative;
+}
+
+#game-frame {
+    width: 100%;
+    height: 600px;
+}
+
 /* @footer
 -------------------------------------------------- */
 /* Wrapper for page content to push down footer. */

@@ -13,6 +13,7 @@ from arcade.base.util import urljoin
 class Game(models.Model):
     author = models.ForeignKey(User)
     name = models.CharField(max_length=128)
+    developer_name = models.CharField(max_length=255, default='')
     launch_url = models.CharField(max_length=255)
 
     # NOTE: Because we rely on the pk existing, packaged_app can only be set on an instance that is
@@ -66,6 +67,10 @@ class Game(models.Model):
         launch_path = manifest['launch_path'].lstrip('/')
         self.launch_url = urljoin(self.extracted_app_url, launch_path)
         self.name = manifest['name']
+
+        developer = manifest.get('developer')
+        if developer:
+            self.developer_name = developer.get('name', 'Unknown')
 
 
     def get_absolute_url(self):
