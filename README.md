@@ -11,17 +11,17 @@ Prerequisites:
 
 ```sh
 # Clone the repo and enter the directory.
-git clone https://github.com/Osmose/topdown.git; cd topdown
+git clone https://github.com/Osmose/topdown.git && cd topdown
 
 # Install the development requirements.
-pip install -r requirements/dev.txt
+pip install -r requirements/prod.txt
 
 # Copy the local settings template and fill it in.
-cp topdown/settings/local.py-dist topdown/settings/local.py
-vi topdown/settings/local.py
+cp arcade/settings/local.py-dist arcade/settings/local.py
+vi arcade/settings/local.py
 
 # Start the development server.
-python manage.py runserver`
+python manage.py runserver
 ```
 
 ## License
