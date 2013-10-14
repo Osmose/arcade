@@ -11,7 +11,7 @@ Prerequisites:
 
 ```sh
 # Clone the repo and enter the directory.
-git clone https://github.com/Osmose/topdown.git && cd topdown
+git clone https://github.com/Osmose/arcade.git && cd arcade
 
 # Install the development requirements.
 pip install -r requirements/prod.txt
