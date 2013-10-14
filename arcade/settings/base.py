@@ -92,8 +92,10 @@ WSGI_APPLICATION = 'arcade.wsgi.application'
 INSTALLED_APPS = (
     'arcade.base',
     'arcade.users',
+    'arcade.games',
 
     'django_browserid',
+    'south',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',

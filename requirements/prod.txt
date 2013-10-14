@@ -1,5 +1,8 @@
 # Libraries needed for a production install of topdown.
 
 django==1.5.4
+django-braces==1.2.2
 django-browserid==0.9
+django-vanilla-views==1.0.2
 jingo==0.6.1
+south==0.8.2

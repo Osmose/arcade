@@ -7,6 +7,7 @@ import jingo.monkey
 
 urlpatterns = patterns('',
     url(r'', include('arcade.base.urls')),
+    url(r'', include('arcade.games.urls')),
 
     url(r'^auth/', include('django_browserid.urls')),
 )

@@ -1,0 +1,7 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+  <h1>{{ game.name }}</h1>
+  <iframe src="{{ game.launch_url }}" style="width: 800px; height: 600px" allowfullscreen="true">
+  </iframe>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% from 'base/forms.html' import form_field %}
+
+{% block content %}
+  <h1>Upload Game</h1>
+  <form method="post" enctype="multipart/form-data">
+    {{ csrf() }}
+    {{ form_field(form.packaged_app_archive) }}
+    <button type="submit">Upload</button>
+  </form>
+{% endblock %}
